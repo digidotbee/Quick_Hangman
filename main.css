@@ -5,8 +5,21 @@
 }
 
 #letters{
+  width: 50%;
   display: flex;
+  justify-content: center;
+  align-items: space-between;
   flex-wrap: wrap;
-  width: 5%;
-  
+}
+
+.letter-btns{
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  margin: 10px;
+  align-content: center;
+}
+
+.letter-btns:hover{
+  background-color: aqua;
 }
