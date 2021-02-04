@@ -46,17 +46,17 @@ document.getElementById('#letters').innerHTML = keyboard
 // Why cant I inject these into the DOM without everything breaking?!?!
 
 // Track what letters the user as guessed and set it into the DOM
-let lettersGuessed = []
-function letterClickTracking(btn) {
-    if 
-}
+// let lettersGuessed = []
+// function letterClickTracking(btn) {
+//     if 
+// }
 
 
 
 
-let wordStat = null
-let healthMeter = 7
-let mistakes = 0
+// let wordStat = null
+// let healthMeter = 7
+// let mistakes = 0
 
 
 
