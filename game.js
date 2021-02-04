@@ -9,10 +9,11 @@ function makeRandomWord() {
     return randomWord
 }
 
-const dashContainer = document.querySelector('#dashes')
-const btnContainer = document.querySelector('#letters')
 const randomWord = makeRandomWord()
 console.log(randomWord)
+
+const dashContainer = document.querySelector('#dashes')
+const btnContainer = document.querySelector('#letters')
 
 function makeDashes(word, guesses) {
     const wordArray = randomWord.split('').map(letter => {
@@ -21,18 +22,31 @@ function makeDashes(word, guesses) {
         console.log(letter, showLetter, letterOrNot, guesses)    
         return `<div class="dash">${letterOrNot}</div>`
     })
+
     const dashString = wordArray.join('')
-    const dashContainer = document.querySelector('#dashes')
     dashContainer.innerHTML = dashString    
 }
+
+makeDashes(randomWord, guesses)
+
+
 // II.
 // User guesses from a list of letters and those letters are compared to the string of words in the wordToGuess:
 
 // A. first .map some letter buttons and style them in main.css
 
-const btns = 'a b c d e f g h i j k l m n o p q r s t u v w x y z' 
+function makeBtns(){
+    const keyboardBtns = 'a b c d e f g h i j k l m n o p q r s t u v w x y z' 
+    const btnString = keyboardBtns.split(" ")
+    .map(letter => `<button>${letter}</button>`)
+    .join('')
+    btnContainer.innerHTML = btnString
+}
 
-const letterArray = btns.split(" ")
+makeBtns()
+
+
+
 
 // console.log(letterArray)
 
